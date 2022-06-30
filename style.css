@@ -1,0 +1,275 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    
+}
+
+.clear {
+    clear: both;
+}
+#main{
+    margin: 10px;
+    
+}
+#header{
+    height: 100px;
+    display:flex;
+    line-height: 100px; 
+    text-align: center;
+    margin-bottom: 8px;
+}
+#header .logo {
+    width: 25%;
+    margin-right: 8px;
+    background-color: bisque;
+    
+}
+#header .banner {
+    
+     width: 75%;
+    background-color: aqua;
+}
+
+#head-link{
+    border: 2px solid #333;   
+}
+/* nav left */
+#head-link > .nav >li,
+#footer > .footer__nav > .nav > li
+ {
+    display: inline-block;
+    list-style-type: none;
+}
+.nav {
+    position: relative;  
+    display: inline-block;
+}
+#head-link .nav li a {
+    color: aqua;
+   padding: 12px 17px;
+   display: block;
+    
+}
+#footer .nav li:hover a,
+#head-link .nav li:hover a {
+    color: rgb(12, 12, 12);
+    background-color: #ccc;
+}
+/* dấu | */
+.nav li a[class*="nav__"]::after {
+    position: absolute;
+    content: "";
+    border-left: 2px solid #333;
+    height: 20px;
+    margin-left: 16px;  
+}
+/* end nav left */
+
+/* nav right */
+.search-btn {
+    position: relative;
+    width: 300px;
+  vertical-align: middle;
+  white-space: nowrap;
+  float: right;
+}
+.search_icon {
+    
+}
+.ti-search:before {
+    position: absolute;
+    top: 8px;
+    right: 178px;
+}
+.search-btn input#search{
+    width: 200px;
+    height: 28px;
+    background: #fff;
+    border: 2px solid #333;
+    font-size: 16px;
+    color: #63717f;
+    padding-left: 24px;
+    padding-bottom: 6px;
+    border-radius: 50px;
+  }
+.search-btn .search_icon {
+  position: absolute;
+  margin-left: 16px;
+  margin-top: 6px;
+  color: #4f5b66;
+  right: 4px;
+}
+#container {
+    display: flex;
+    height: 416px;
+    margin-top: 6px;
+    margin-bottom: 16px;
+}
+#left {  
+    width: 16%;
+    display:flex;
+    flex-direction: column;
+    margin-right: 8px;
+
+}
+#left .left__nav li a {
+    color: #333;
+    list-style-type: none;
+}
+.left__nav  li:hover  a {
+    opacity: 0.6;
+    text-decoration: none;
+}
+.left__nav{
+    height: 170px;
+    background-color: rgb(184, 209, 72);
+    padding: 0 8px;
+    list-style-type: none;
+}
+
+
+.left__nav-1{  
+    height: 200px;
+    background-color: aqua;
+    text-align: center; 
+    padding: 0 8px;
+    
+
+}
+
+
+#content{
+    width: 60%; 
+    
+   
+}
+.hot {
+    display: flex;
+}
+.hot .news__hot,
+.hot .news__slide {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: orange;
+    padding: 18px;
+    height: 150px;
+    font-size: 30px;
+    color: #fff;
+    
+}
+.hot .news__hot  {
+    width: 40%;     
+}
+
+.hot .news__slide  {
+    width: 60%;
+    margin-left: 8px;
+    position: relative;
+ 
+}
+.news__slide .news__slide-1,
+.news__slide .news__slide-2,
+.news__slide .news__slide-3 {
+    position: absolute;
+    width: 80%;
+    height: 120px;
+}
+
+.news__slide-1 {
+    top: 5px;
+    left: 10px;
+    background-color: aqua;
+}
+.news__slide-2 {
+    top: 15px;
+    left: 20px;
+    background-color: #a61fb3;
+}
+.news__slide-3 {
+    top: 25px;
+    left: 30px;
+    background-color: #0bc753;
+}
+.news__slide-text {
+    position: absolute;
+    color: rgb(223, 8, 8);
+    height: 42px;
+    min-width: 50%;
+    top: 64px;
+    left: 75px;
+    text-align: center;
+}
+.news {
+    display: flex;
+}
+.news .news__1 {
+    
+    height: 120px;
+    width: 33%;
+    margin: 8px 0 8px 8px;
+    background-color: chartreuse;
+    line-height: 120px;
+    text-align: center;
+}
+#right {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    height: 430px;
+    width: 25%;
+    margin-left: 8px;
+    border: 2px solid #333;
+}
+
+
+
+.right__calendar {
+    height: 33%;
+    margin: 8px 8px 4px 8px;
+    border: 2px solid #333;
+
+}
+
+.right__chart {
+    height: 33%;
+    margin: 8px 8px 4px 8px;
+    border: 2px solid #333;
+
+}
+
+.right__map {
+    height: 33%;
+    margin: 8px 8px 4px 8px;
+    border: 2px solid #333;
+
+}
+
+#footer{
+   display: flex;
+   margin: 8px 0;
+   border: 2px solid #333;  
+   position: relative;
+   height: 40px;
+}
+.footer__source {
+    padding: 8px;
+    text-align: center;
+    
+}
+.footer__nav  .nav {
+    float: right;
+    position: absolute;
+    right: 0;
+    margin-right: 8px;
+}
+#footer .nav > li > a {
+    position: relative;
+    display: block;
+    padding: 8px 15px;
+    text-decoration: underline;
+}
